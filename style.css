@@ -1,0 +1,30 @@
+.caja{
+    font-style: oblique;
+    border: solid orange;
+    background-color: orange;
+    height: 10%;
+    text-align: center;
+}
+.cajaContenido{
+    border: solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(253, 202, 107);
+    height: 10%;
+}
+
+ul{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+}
+#Nombre{
+    font-size: 40px;
+    color: white;
+    
+}
+#Contacto{
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
