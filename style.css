@@ -9,6 +9,8 @@
     border: solid rgb(0, 0, 0);
     border-radius: 10px;
     margin: 10px;
+    margin-right: 80px;
+	margin-left: 80px;
     padding: 10px;
     background-color: rgb(253, 202, 107);
     height: 10%;
