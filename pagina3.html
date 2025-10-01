@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="portafolio.css">
+  <!-- FontAwesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style3.css">
+  <script src="js3.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Junior Rocha Luna</h1>
+    <nav class="top-nav">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Maquetación</a>
+      <a href="#"><i class="fa-brands fa-css3-alt"></i> CSS 3</a>
+      <a href="#"><i class="fa-solid fa-code"></i> CSS</a>
+      <a href="#"><i class="fa-solid fa-at"></i> @query</a>
+      <a href="#"><i class="fa-brands fa-js"></i> JavaScript</a>
+    </nav>
+  </header>
+  <div class="container">
+    <!-- Checkbox oculto que controla el menú -->
+    <input type="checkbox" id="menu-toggle" />
+    <!-- Menú lateral -->
+    <nav class="sidebar">
+      <h2 class="menu-title"><i class="fa-solid fa-bars"></i> Menú</h2>
+      <ul>
+        <li><button onclick="mostrarSeccion('inicio')"><i class="fa-solid fa-house"></i> Maquetación</button></li>
+        <li><button onclick="mostrarSeccion('quien')"><i class="fa-solid fa-user"></i> Quien soy</button></li>
+        <li><button onclick="mostrarSeccion('css3')"><i class="fa-brands fa-css3-alt"></i> CSS3</button></li>
+        <li><button onclick="mostrarSeccion('js')"><i class="fa-brands fa-js"></i> JavaScript</button></li>
+      </ul>
+    </nav>
+    <!-- Botón toggle que controla el checkbox -->
+    <label for="menu-toggle" class="toggle-button">&#9776;</label>
+    <!-- Contenido principal -->
+    <main class="content">
+      <section id="inicio" class="seccion activa">
+        <h2>Bienvenidos a Mi Portfolio</h2>
+        <p>Selecciona un tema del menú lateral para explorar mi trabajo y habilidades.</p>
+        <div class="box">
+          <h3>¡Conóceme mejor!</h3>
+          <p>Utiliza el menú de la izquierda para navegar entre las diferentes secciones y descubrir más sobre mis proyectos y experiencia.</p>
+        </div>
+      </section>
+      <section id="quien" class="seccion">
+        <h2>¿Quién soy?</h2>
+        <p>Soy un estudiante de la universidad nacional de cañete que cursa la carrera de ingeniería de sistemas en el IV ciclo.</p>
+      </section>
+      <section id="css3" class="seccion">
+        <h2>Mis conocimientos en CSS3</h2>
+        <p>Aquí muestro ejemplos de diseño y estilos que he trabajado con CSS3.</p>
+        <nav>
+          <ul>
+            <li><a href="pagina0.html">Css 1</a></li>
+            <li><a href="pagina1.html">Css 2</a></li>
+            <li><a href="pagina2.html">Css 3</a></li>
+          </ul>
+        </nav>
+      </section>
+  <section id="js" class="seccion">
+        <h2>JavaScript</h2>
+        <p>Explora mis proyectos en JavaScript, incluyendo interactividad, animaciones y lógica de aplicaciones web.</p>
+      </section>
+    </main>
+  </div>
+  <script>
+    // Función para mostrar secciones dinámicamente
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.seccion').forEach(sec => sec.classList.remove('activa'));
+      document.getElementById(id).classList.add('activa');
+    }
+  </script>
+  <!-- FontAwesome CDN para íconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2%;
+  text-align: center;
+}
+.top-nav {
+  margin-top: 10px;
+}
+.top-nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  min-height: 90vh;
+  /* Para que el contenido se ajuste cuando el menú se retrae */
+  transition: margin-left 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(to bottom, #00aaff, #0077aa);
+  color: white;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  /* Para que el sidebar esté sobre el contenido en pantallas pequeñas */
+  position: relative;
+  z-index: 10;
+}
+.menu-title {
+  margin-bottom: 15px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+.sidebar button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  padding: 8px;
+  cursor: pointer;
+}
+.sidebar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+.box {
+  background: #f8f8f8;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Secciones dinámicas */
+.seccion {
+  display: none;
+}
+.seccion.activa {
+  display: block;
+}
+
+/* --- Estilos para menú lateral retráctil solo con HTML y CSS --- */
+
+/* Checkbox oculto que controla el menú */
+#menu-toggle {
+  display: none;
+}
+
+/* Cuando el checkbox está marcado, retraemos el menú */
+#menu-toggle:checked + .sidebar {
+  transform: translateX(-100%);
+}
+
+/* Ajustar el contenido cuando el menú está retraído */
+#menu-toggle:checked ~ .content {
+  margin-left: 0;
+}
+
+/* Botón toggle (label) */
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #0077aa;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+  z-index: 1000;
+  user-select: none;
+  transition: left 0.3s ease;
+}
+
+/* Mover el botón cuando el menú está retraído */
+#menu-toggle:checked + .sidebar + .toggle-button {
+  left: 10px;
+}
